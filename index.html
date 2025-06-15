@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Portfolio</a>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About Me</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="home">
+      <div class="home-img">
+        <img src="images/main2.jpg" alt="Jayden Portrait" />
+      </div>
+      <div class="home-content">
+        <h1>Hi, It's <span>Oun Jayden</span></h1>
+        <h3 class="typing-text">I'm a <span></span></h3>
+        <p>I’m passionate about mobile games, UI/UX design, and various creative aspects such as video editing. This portfolio showcases my growth through school projects, solo concepts, and collaborative group work.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="#projects" class="btn">View My Projects</a>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Previous Game Projects</h2>
+
+      <div class="project">
+        <h3>Verdent (2D Eco Game)</h3>
+        <video src="images/verdent_trailer.mp4" controls></video>
+        <div class="project-images">
+          <img src="images/verdent1.jpg" alt="Verdent 1">
+          <img src="images/verdent2.jpg" alt="Verdent 2">
+          <img src="images/verdent3.jpg" alt="Verdent 3">
+          <img src="images/verdent4.jpg" alt="Verdent 4">
+          <img src="images/verdent5.jpg" alt="Verdent 5">
+          <img src="images/verdent6.jpg" alt="Verdent 6">
+          <img src="images/verdent7.jpg" alt="Verdent 7">
+          <img src="images/verdent8.jpg" alt="Verdent 8">
+          <img src="images/verdent9.jpg" alt="Verdent 9">
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Pre-Polytechnic Demo Reel</h3>
+        <video src="images/pre_poly_demo.mp4" controls></video>
+      </div>
+
+      <div class="project">
+        <h3>FPS Year 2 Project</h3>
+        <video src="images/year2_fps.mp4" controls></video>
+      </div>
+
+      <div class="project">
+        <h3>Year 2 Horror Game Group Project</h3>
+        <video src="images/source_of_light_trailer.mp4" controls></video>
+        <div class="project-images">
+          <img src="images/horror1.png" alt="Horror Screenshot 1">
+          <img src="images/horror2.png" alt="Horror Screenshot 2">
+          <img src="images/horror3.png" alt="Horror Screenshot 3">
+          <img src="images/horror4.png" alt="Horror Screenshot 4">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+
+        <p>
+            I'm a digital media student passionate about crafting immersive mobile game experiences and intuitive UI/UX designs.
+            From solo ideas to group collaborations, I enjoy blending creativity with technology - using tools like Figma,
+            Unity, and video editing software to tell impactful stories.
+        </p>
+
+        <p>
+            I'm constantly exploring new ways to combine gameplay, visuals, and user experience to build meaningful and fun projects.
+            Whether it's a game prototype, a UI mockup, or a short reel, I aim to make every piece count.
+        </p>
+
+        <div class="about-gallery">
+            <img src="images/about1.png" alt="About Image 1">
+            <img src="images/about2.png" alt="About Image 2">
+            <img src="images/about3.png" alt="About Image 3">
+            <img src="images/about4.png" alt="About Image 4">
+        </div>
+
+        <ul class="contact-links">
+            <li><strong>Email:</strong> <a href="mailto:jweng26@gmail.com">jweng26@gmail.com</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/oun-jayden-b88232279/" target="_blank">https://www.linkedin.com/in/oun-jayden-b88232279/</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/jayounnnn" target="_blank">https://github.com/jayounnnn</a></li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form class="contact-form">
+            <p>Let's collaborate or chat about game ideas! Reach me via any platform above or email me at: <strong>jweng26@email.com</strong></p>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit" class="btn">SendMessage</button>
+      </form>
+    </section>
+  </main>
+
+ <div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <img src="" alt="Full Image">
+</div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.project-images img, .about-gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
